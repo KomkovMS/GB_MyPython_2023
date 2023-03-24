@@ -21,3 +21,7 @@ while count > 0:
     count -= 1
 
 print(f'сумма чисел: {result}')
+
+# решение преподавателя:
+n = input("Введите число: ")
+print(f'Результат: {int(n) + int(n * 2) + int(n * 3)}')
