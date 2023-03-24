@@ -30,3 +30,21 @@ if sum_left == sum_right:
     print(f'{ticket_number} -> yes')
 else:
     print(f'{ticket_number} -> no')
+
+
+# другое решение:
+def find_sum(num):
+    sum_ = 0
+    while num > 0:
+        last_digit = num % 10  # получаем последнюю цифру
+        sum_ += last_digit
+        num = num // 10  # отсекает последнюю цифру
+    return sum_
+
+
+ticket = input('Введите номер билета: ')
+
+if find_sum(int(ticket[:3])) == find_sum(int(ticket[-3:])):
+    print("yes")
+else:
+    print("no")
