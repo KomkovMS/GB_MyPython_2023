@@ -51,3 +51,12 @@ while True:
         p = list_number[0] * list_number[1]
         print(f'Katy, попробуй заново, подсказка: сумма этих чисел {s},'
               f'произведение {p}')
+
+# Эталонное решение ???:
+
+x = int(input('Первое число: '))
+y = int(input('Второе число: '))
+for i in range(x):
+    for j in range(y):
+        if x == i + j and y == i * j:
+            print(i, j)
