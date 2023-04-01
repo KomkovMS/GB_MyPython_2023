@@ -9,13 +9,20 @@ def find_indexes(numbers, min_val, max_val):
     indexes = []
     for index, number in enumerate(numbers):
         if min_val <= number <= max_val:
-            indexes.append(index)
+            indexes.append(str(index))
     return indexes
 
 
-numbers = [1, 3, 5, 7, 9, 2, 4, 6, 8]
+numbers = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 min_val = 3
 max_val = 7
 indexes = find_indexes(numbers, min_val, max_val)
-print(indexes)  # [1, 2, 3, 6, 7]
+print(' '.join(indexes))  # [1, 2, 3, 6, 7]
 
+# Эталонное решение:
+list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+min_number = 3 # int(input())
+max_number = 7 # int(input())
+for i in range(len(list_1)):
+    if min_number <= list_1[i] <= max_number:
+        print(i, end=' ')
