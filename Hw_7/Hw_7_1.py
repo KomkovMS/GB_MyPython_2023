@@ -1,3 +1,5 @@
+import time
+
 """
 Задание 1.
 
@@ -17,8 +19,23 @@ running (запуск).
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
 
+
 class TrafficLight:
-    pass
+    __color = "цвет"
+
+    def running(self):
+        self.__color = 'красный'
+        print(f'Горит {self.__color} светофор')
+        time.sleep(7)
+
+        self.__color = 'желтый'
+        print(f'Горит {self.__color} светофор')
+        time.sleep(2)
+
+        self.__color = 'зеленый'
+        print(f'Горит {self.__color} светофор')
+        time.sleep(4)
 
 
-
+my_obj = TrafficLight()
+my_obj.running()
