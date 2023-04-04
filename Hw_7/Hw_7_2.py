@@ -37,4 +37,4 @@ print(
     f'Масса асфальта, необходимого для покрытия всего дорожного полотна: '
     f'{my_obj._length}м*{my_obj._width}м*{my_obj.weight}кг*'
     f'{my_obj.thickness}м = {my_obj.mass_calculation()} кг = '
-    f'{int(my_obj.mass_calculation()/1000)} тонн.')
+    f'{int(my_obj.mass_calculation() / 1000)} тонн.')
