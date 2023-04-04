@@ -19,3 +19,21 @@ num_columns=6), которая принимает в качестве аргум
 5 10 15 20 25 30
 6 12 18 24 30 36
 """
+
+
+class OperationTable:
+    def __init__(self, operation, num_rows=6, num_columns=6):
+        self.operation = operation
+        self.num_rows = num_rows
+        self.num_columns = num_columns
+
+    def print_operation_table(self):
+        for i in range(1, self.num_rows + 1):
+            row = []
+            for j in range(1, self.num_columns + 1):
+                row.append(str(self.operation(i, j)))
+            print(' '.join(row))
+
+
+table = OperationTable(lambda x, y: x * y)
+table.print_operation_table()
