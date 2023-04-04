@@ -28,3 +28,6 @@
 матрицы и т.д.
 """
 
+
+class Matrix:
+    pass
