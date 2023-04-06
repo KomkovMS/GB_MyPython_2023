@@ -1,0 +1,8 @@
+action:
+- msg_1
+- msg_2
+- msg_3
+to:
+- account_1
+- account_2
+- account_3
