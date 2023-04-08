@@ -50,7 +50,7 @@ def get_data():
 
     for i in range(1, 4):
         filename = f'info_{i}.txt'
-        with open(filename) as file:
+        with open(filename, encoding='utf-8') as file:
             data = file.read()
 
             os_prod = re.compile(r'Изготовитель системы:\s*(\S+)')
@@ -73,7 +73,7 @@ def write_to_csv(csv_file):
 
     data = get_data()
 
-    with open(csv_file, 'w', newline='') as file:
+    with open(csv_file, 'w', encoding='utf-8', newline='') as file:
         writer = csv.writer(file)
         for row in data:
             writer.writerow(row)
