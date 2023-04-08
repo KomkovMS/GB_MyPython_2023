@@ -1,0 +1,11 @@
+dict:
+  computer: 200ˆ-1000ˆ
+  keyboard: 5ˆ-50ˆ
+  mouse: 4ˆ-7ˆ
+  printer: 100ˆ-300ˆ
+items_quantity: 4
+list:
+- computer
+- printer
+- keyboard
+- mouse
