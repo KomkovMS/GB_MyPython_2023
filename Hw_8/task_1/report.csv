@@ -1,4 +1,6 @@
-Изготовитель системы,Название ОС,Код продукта,Тип системы
-LENOVO,Microsoft Windows 7 Профессиональная ,00971-OEM-1982661-00231,x64-based PC
-ACER,Microsoft Windows 10 Professional,00971-OEM-1982661-00231,x64-based PC
-DELL,Microsoft Windows 8.1 Professional,00971-OEM-1982661-00231,x86-based PC
+РР·РіРѕС‚РѕРІРёС‚РµР»СЊ СЃРёСЃС‚РµРјС‹,РќР°Р·РІР°РЅРёРµ РћРЎ,РљРѕРґ РїСЂРѕРґСѓРєС‚Р°,РўРёРї СЃРёСЃС‚РµРјС‹
+1,LENOVO,ACER,00971-OEM-1982661-00231,x64-based
+
+2,ACER,Windows 10,00971-OEM-1982661-00231,x64-based
+
+3,DELL,Windows 8.1,00971-OEM-1982661-00231,x86-based
