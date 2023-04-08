@@ -36,16 +36,18 @@ def write_order_to_json(item, quantity, price, buyer, date):
         'date': date
     }
 
-    with open('orders.json', 'r') as file:
+    with open('orders.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
 
     data['orders'].append(order)
 
-    with open('orders.json', 'w') as file:
+    with open('orders.json', 'w', encoding='utf-8') as file:
         json.dump(data, file, indent=4)
 
 
-write_order_to_json("принтер", "10", "6700", "Ivanov I.I.", "24.09.2017")
-write_order_to_json("scaner", "20", "10000", "Petrov P.P.", "11.01.2018")
-write_order_to_json("scaner", "20", "10000", "Petrov P.P.", "11.01.2018")
-write_order_to_json("scaner", "20", "10000", "Petrov P.P.", "11.01.2018")
+write_order_to_json('item_1', 1, 1000, 'Sidorov S.S', '24.09.2017')
+write_order_to_json('item_2', 2, 2000, 'Komkov K.K.', '11.01.2018')
+write_order_to_json('item_3', 3, 3000, 'Ivanov V.V.', '11.01.2018')
+write_order_to_json('item_4', 4, 5000, 'Andreev A.A.', '11.01.2018')
+
+write_order_to_json('item_4', 2, 5000, 'Andreev A.A.', '11.01.2018')
