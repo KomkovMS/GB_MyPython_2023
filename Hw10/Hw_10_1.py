@@ -17,25 +17,14 @@
 --- используйте списки и циклы, не дублируйте функции
 """
 
-word_development = 'разработка'
-word_socket = 'сокет'
-word_decorator = 'декоратор'
-
-def f_print(a, b, c):
-    return print(f'{type(a)}, {a}\n'
-                 f'{type(b)}, {b}\n'
-                 f'{type(c)}, {c}')
-
-def to_unicode_escape(word):
-    return word.encode('unicode_escape').decode()
-
-f_print(word_development, word_socket, word_decorator)
-
-word_development_unicode = to_unicode_escape(word_development)
-word_socket_unicode = to_unicode_escape(word_socket)
-word_decorator_unicode = to_unicode_escape(word_decorator)
-
-f_print(word_development_unicode, word_socket_unicode, word_decorator_unicode)
+lst = ['разработка', 'сокет', 'декоратор']
 
 
+def f_print(words):
+    for word in words:
+        print(type(word), word)
+        word_unicode = word.encode('unicode_escape').decode()
+        print(type(word_unicode), word_unicode)
 
+
+f_print(lst)
