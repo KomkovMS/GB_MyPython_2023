@@ -25,6 +25,7 @@ print(type(word_development), word_development)  # <class 'str'> разрабо�
 print(type(word_socket), word_socket)
 print(type(word_decorator), word_decorator)
 
+
 # word_development_unicode = ''.join(
 #     [f'\\u{ord(symbol):04x}' for symbol in word_development])
 # word_socket_unicode = ''.join(
@@ -35,11 +36,19 @@ print(type(word_decorator), word_decorator)
 
 # с использованием метода encode() с параметром 'unicode_escape'
 
-word_development_unicode = word_development.encode(
-    'unicode_escape').decode()
-word_socket_unicode = word_socket.encode('unicode_escape').decode()
-word_decorator_unicode = word_decorator.encode(
-    'unicode_escape').decode()
+def to_unicode_escape(word):
+    return word.encode('unicode_escape').decode()
+
+
+# word_development_unicode = word_development.encode(
+#     'unicode_escape').decode()
+# word_socket_unicode = word_socket.encode('unicode_escape').decode()
+# word_decorator_unicode = word_decorator.encode(
+#     'unicode_escape').decode()
+
+word_development_unicode = to_unicode_escape(word_development)
+word_socket_unicode = to_unicode_escape(word_socket)
+word_decorator_unicode = to_unicode_escape(word_decorator)
 
 print(type(word_development_unicode),
       word_development_unicode)
@@ -49,6 +58,6 @@ print(type(word_socket_unicode),
 print(type(word_decorator_unicode),
       word_decorator_unicode)
 
-print(type(word_development_unicode))   # <class 'str'>
+print(type(word_development_unicode))  # <class 'str'>
 print(type(word_socket_unicode))
 print(type(word_decorator_unicode))
