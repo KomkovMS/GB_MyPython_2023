@@ -21,43 +21,21 @@ word_development = 'разработка'
 word_socket = 'сокет'
 word_decorator = 'декоратор'
 
-print(type(word_development), word_development)  # <class 'str'> разработка
-print(type(word_socket), word_socket)
-print(type(word_decorator), word_decorator)
-
-
-# word_development_unicode = ''.join(
-#     [f'\\u{ord(symbol):04x}' for symbol in word_development])
-# word_socket_unicode = ''.join(
-#     [f'\\u{ord(symbol):04x}' for symbol in word_socket])
-# word_decorator_unicode = ''.join(
-#     [f'\\u{ord(symbol):04x}' for symbol in word_decorator])
-#
-
-# с использованием метода encode() с параметром 'unicode_escape'
+def f_print(a, b, c):
+    return print(f'{type(a)}, {a}\n'
+                 f'{type(b)}, {b}\n'
+                 f'{type(c)}, {c}')
 
 def to_unicode_escape(word):
     return word.encode('unicode_escape').decode()
 
-
-# word_development_unicode = word_development.encode(
-#     'unicode_escape').decode()
-# word_socket_unicode = word_socket.encode('unicode_escape').decode()
-# word_decorator_unicode = word_decorator.encode(
-#     'unicode_escape').decode()
+f_print(word_development, word_socket, word_decorator)
 
 word_development_unicode = to_unicode_escape(word_development)
 word_socket_unicode = to_unicode_escape(word_socket)
 word_decorator_unicode = to_unicode_escape(word_decorator)
 
-print(type(word_development_unicode),
-      word_development_unicode)
-# <class 'str'> \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430
-print(type(word_socket_unicode),
-      word_socket_unicode)
-print(type(word_decorator_unicode),
-      word_decorator_unicode)
+f_print(word_development_unicode, word_socket_unicode, word_decorator_unicode)
 
-print(type(word_development_unicode))  # <class 'str'>
-print(type(word_socket_unicode))
-print(type(word_decorator_unicode))
+
+
